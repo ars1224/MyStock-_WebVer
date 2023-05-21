@@ -27,7 +27,8 @@ if (isset($_POST['User']) && isset($_POST['Pass'])){
 
         $result = mysqli_query($conn, $sql);
         if(mysqli_num_rows($result)){
-           echo"hello world!";
+            header("Location: home.php");
+            exit();
         }else{
             header("Location: index.php?error=Input a valid credentials!");
         exit();

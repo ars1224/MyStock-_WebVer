@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MyStock | login</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles_Login.css">
 </head>
 
 <body>
@@ -16,10 +16,21 @@
             
             <form class="FrmLogIn" action="Login.php" method="post" >
              <h2>Login</h2>
-                  <?php if(isset($_GET['error'])){?>
-                    <p class="erRor"> <?php echo$_GET['error']; ?> </p>
+                  <?php 
+                  
+                  if(isset($_GET['error'])){
+                    ?>
                     
-                  <?php }?>
+                    <p class="erRor"> 
+                        <?php 
+                        echo$_GET['error']; 
+                        ?> 
+                    </p>
+                    
+                  <?php 
+                }
+                
+                ?>
                 <div id="textbx" class="input-box-user">
                     <input class="resizedtextbox" type="text" name="User" placeholder="Username" >
                 </div>
