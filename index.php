@@ -10,6 +10,7 @@
 </head>
 
 <body>
+     <div class="LoginFrm">
         <div class="FormBx">
             <div id="FormBx">
             
