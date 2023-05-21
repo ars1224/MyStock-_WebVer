@@ -28,13 +28,6 @@ flex-direction: column;
 align-items: center;
 }
 
-.FrmSignUp{
-    display: flex;
-    justify-content: center;
-flex-direction: column;
-align-items: center;
-}
-
 .Remember{
     align-self: flex-start;
     padding-left: 30px;
