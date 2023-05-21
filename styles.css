@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 #FormBx{
@@ -27,6 +28,13 @@ flex-direction: column;
 align-items: center;
 }
 
+.FrmSignUp{
+    display: flex;
+    justify-content: center;
+flex-direction: column;
+align-items: center;
+}
+
 .Remember{
     align-self: flex-start;
     padding-left: 30px;
@@ -36,7 +44,8 @@ align-items: center;
     padding-top: 10px;
 }
 
-.btn, .Register, .forgot, .input-box-user, .input-box-pass{
+.btn, .Register, .forgot, .input-box-user, .input-box-pass,.UserSign,
+.PassSign,.NameSign,.DeptSign{
     height: 30px;
     padding: 20px;
 }
@@ -61,8 +70,9 @@ button:hover{
    background-color: #34db87;
 }
 
-p.class{
-    background: pink;
-    border-radius: 5px;
-    padding: 5px;
+.erRor{
+  background-color: rgb(240, 132, 132);
+  color: aliceblue;
+  border-radius: 5px;
+  padding: 5px;
 }
