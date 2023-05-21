@@ -60,3 +60,9 @@ button:hover{
     opacity: .7;
    background-color: #34db87;
 }
+
+p.class{
+    background: pink;
+    border-radius: 5px;
+    padding: 5px;
+}

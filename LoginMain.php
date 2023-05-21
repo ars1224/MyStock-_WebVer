@@ -13,9 +13,13 @@
      <div class="LoginFrm">
         <div class="FormBx">
             <div id="FormBx">
-            <h2>Login</h2>
-            <form class="FrmLogIn" action="login.php" method="post" >
-
+            
+            <form class="FrmLogIn" action="Login.php" method="post" >
+             <h2>Login</h2>
+                  <?php if(isset($_GET['error'])){?>
+                    <p class="class" style= "background: pink; border-radius: 5px;" ><?php echo$_GET['error']; ?></p>
+                    
+                  <?php }?>
                 <div id="textbx" class="input-box-user">
                     <input class="resizedtextbox" type="text" name="User" placeholder="Username" >
                 </div>
