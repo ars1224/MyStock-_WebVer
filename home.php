@@ -4,7 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MyStock | Sign Up</title>
-        <link rel="stylesheet" href="styles_home.css">
+        <link rel="stylesheet" href="styles_homey.css">
         
 </head>
 
@@ -46,10 +46,30 @@
         
         <div class="tables">
             <table class="panels">
-                <a href="#"><ul class="products">Products<br></ul></a>
-                <a href="#"><ul class="orders">Orders<br></ul></a>
-                <a href="#"><ul class="Receive">Received Items</ul></a>
-                <a href="#"><ul class="expired">Expired Products</ul></a>
+
+                <a href="#">
+                    <div class="DivProducts">
+                        <ul class="products">Products</ul>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="DivOrders">
+                         <ul class="orders">Orders</ul>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="DivReceive"> 
+                        <ul class="Receive">Item Received</ul>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="DivExpired">
+                        <ul class="expired">Expired</ul>
+                    </div>
+                </a>
             </table>
         </div>
     </div>
