@@ -12,7 +12,7 @@ nav{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
     padding-left: 50px;
 }
 
@@ -27,7 +27,7 @@ nav{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-right: 40px;
+    padding-right: 25px;
 }
 
 ul{

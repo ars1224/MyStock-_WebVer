@@ -11,14 +11,14 @@
 <body>
     <nav class="head">
         <h2 class="tag" href="home.php">My Stock!</h2>
-        
+     
         <div class="navi">
 
             <div class="list">
-                <ul class="home"><a href="home.php">Home</a></ul>
-                <ul class="stock"><a href="home.php">Stock</a></ul>
-                <ul class="received"><a href="home.php">Received Items</a></ul>
-                <ul class="log"><a href="home.php">Log</a></ul>
+                <ul class="home"><a href="home.php">HOME</a></ul>
+                <ul class="stock"><a href="home.php">STOCK</a></ul>
+                <ul class="received"><a href="home.php">RECEIVED ITEMS</a></ul>
+                <ul class="log"><a href="home.php">LOG</a></ul>
             </div>   
 
             <div class="user">
