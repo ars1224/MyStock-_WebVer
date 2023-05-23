@@ -27,17 +27,21 @@ nav{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-right: 25px;
+    padding-right: 40px;
 }
 
 ul{
-    padding-left: 90px;
+    padding-left: 30px;
     font-family: 'Poppins', sans-serif;
 }
 
 .list{
-    padding-right: 150px;
+    padding-right: 50px;
+    font-weight: 700;
+}
 
+.user{
+    font-weight: 900;
 }
 
 a{
@@ -51,5 +55,97 @@ a:hover{
 }
 
 .navi, ul{
+    font-size: 15px;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content : center;
+}
+
+.search-bar{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    padding: 100px;
+}
+
+.textbox,.searchBar,.search,.search-btn{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.searchBar, .resizedtextbox, .searchBtn{
+    height: 50px;
+}
+
+.searchBar{
+    width: 500px;
+    border-radius: 40px;
+    color: grey;
+    border: 1px solid #868686;
+}
+
+.resizedtextbox{
+    width: 200px;
+    border-radius: 40px;
+    color: grey;
+    border: 1px solid #868686;
+}
+
+.searchBtn{
+    width: 100px;
+    border-radius: 40px;
+    color: grey;
+    cursor: pointer;
+    border: 1px solid #868686;
+    background-color: transparent;
+    width: 100px;
+    color: #000000;
+    font-size: 25x;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.6);
+}
+
+.tables{
+    display: flex;
+    flex-direction: row;
+}
+
+.products,.orders,.Receive,.expired{
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #34db87;
+    border-radius: 30px;
     font-size: 20px;
+    font-weight:600;
+    color: aliceblue;   
+}
+
+.products{
+    background-color: #0d5fbd;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+}
+.orders{
+    background-color: #bd0d53;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+}
+.Receive{
+    background-color: #0dbd10;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+}
+.expired{
+    background-color: #bd0d0d;
+    text-justify: auto;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+}
+.products,.orders,.Receive,.expired{
+    display: flex;
+    align-items: center;
 }
