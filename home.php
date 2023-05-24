@@ -16,7 +16,7 @@
 
             <div class="list">
                 <ul class="home"><a href="home.php">HOME</a></ul>
-                <ul class="stock"><a href="home.php">STOCK</a></ul>
+                <ul class="stock"><a href="Stock_page.html">STOCK</a></ul>
                 <ul class="received"><a href="home.php">RECEIVED ITEMS</a></ul>
                 <ul class="log"><a href="home.php">LOG</a></ul>
             </div>   
