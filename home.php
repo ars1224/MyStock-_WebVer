@@ -10,7 +10,7 @@
 
 <body>
     <nav class="head">
-        <h2 class="tag" href="home.php">My Stock!</h2>
+        <h2 class="tag"><a href="home.php">My Stock!</a></h2>
      
         <div class="navi">
 
@@ -25,20 +25,13 @@
                 <i class="fa-regular fa-user"></i>
             </div>
     </nav>
+
     <div class="home-content">
         <div class="search-bar">
             <div class="search">
                 <input class="searchBar" type="text" name="search" placeholder="Looking for..." >
             </div>
-            
-            <div id="textbx" class="lookingFr">
-                <select name="find" class="resizedtextbox" id="drop">
-                    <option value=""disabled selected hidden>Department</option>
-                    <option value="Factory">Factory</option>
-                    <option value="Warehouse">Warehouse</option>
-                    <option value="Compounding">Compounding</option>
-                </select>
-            </div>
+
             <div class="search-Btn">
                 <button class="searchBtn" type="submit" name="searchBtn">Search</button>
             </div>

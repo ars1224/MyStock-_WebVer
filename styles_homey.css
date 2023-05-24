@@ -14,7 +14,13 @@ nav{
     justify-content: space-between;
     padding: 10px;
     padding-left: 50px;
-    max-width: 100% ;
+    max-width: 100% ;   
+}
+
+nav{
+    position: fixed;
+    width: 100% ; 
+    top: 0;
 }
 
 nav{
@@ -41,8 +47,12 @@ ul{
     font-weight: 700;
 }
 
-.user{
-    font-weight: 900;
+.fa-regular{
+    font-size: 25px;
+    border-style:solid;
+    border-radius: 50%;
+    border-color: aliceblue;
+    padding: 5px;
 }
 
 a{
@@ -50,7 +60,7 @@ a{
     color: rgb(255, 255, 255);
 }
 
-a:hover{
+.home :hover,.stock :hover, .received :hover,.log :hover{
     opacity: .7;
    color: #34db87;
 }
@@ -64,6 +74,7 @@ a:hover{
     flex-direction: column;
     align-items: center;
     justify-content : center;
+    margin-top: 150px;
 }
 
 .search-bar{
