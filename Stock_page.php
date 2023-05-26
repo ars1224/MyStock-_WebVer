@@ -26,6 +26,21 @@
             </div>
     </nav>
 
+    <div class="whName">
+        <div class="name">Warehouse:</div>
+        <div class="Wh">
+            <button class="choose">Choose a Warehouse</button>
+        </div>
+        <div class="arrows">
+            <div class="up">
+                <i class="fa-solid fa-caret-up"></i>
+            </div>
+            <div class="down">
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+        </div>
+    </div>
+<div class="content"></div>
     <div class="search-bar">
         <div class="search">
             <input class="searchBar" type="text" name="search" placeholder="Looking for..." >
@@ -87,21 +102,26 @@
               <td name='NoCtns'>". $row["No_Ctns"] ."</td>
               <td name='Units'>". $row["Units"] ."</td>
               <td name='PrtBx'>". $row["Part_box"] ."</td>
-              <td name=Qty'>". $row["Total_Qty"] ."</td>
-              <td>
-                  <a href='#' class='update'>Update</a>
-                  <a href='#' class='Del'>Delete</a>
+              <td name='Qty'>". $row["Total_Qty"] ."</td>
+              <td class='action'>
+              <div class='ups'>
+              <a href='#' class='update'>Update</a>
+              </div>
+              <div class='del'>
+              <a href='#' class='Del'>Delete</a>
+              </div>
               </td>
           </tr>";
                  }
             ?>
+            
         </tbody>
 
         
         </table>
     </div>
     </div>
-
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/5c09730e7a.js" crossorigin="anonymous"></script>
