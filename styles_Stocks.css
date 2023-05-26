@@ -95,11 +95,8 @@
         
     
     }
-    .add-Item{
-     display: flex;
-     justify-content: end;
-     margin-top: -30px;
-        margin-right: 50px;
+    #add-item{
+     
        
     }
     .inventory{
@@ -219,7 +216,7 @@
 }
  .table-wraper{
     margin-bottom: 20px;
-    height: 400px;
+    height: 730px;
     overflow-y: scroll;
  }
 
@@ -273,3 +270,61 @@
  }
     
 
+.popUp1,.popUp2{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.popUp1,.popUp2{
+    background-color: rgb(253, 253, 253);
+    border-radius: 30px;
+    border-style: dashed;
+    border-color: #34db87;
+    max-height: fit-content;
+    padding: 30px;
+    max-width: 300px;
+}
+
+.popUp1{
+    display:none;
+}
+.popUp2{
+    display: none;
+}
+
+.pophead{
+    text-align: center;
+    text-justify: auto;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.resizedtextbox1{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inputs,#drop1{
+    margin-top: 20px;
+    font-size: 15px;
+    padding: 3px;
+}
+
+.addbtn1,.addbtn2{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+   
+}
+
+.addBtn{
+    font-size: 15px;
+    height: 40px;
+    width: 100px;
+    margin-left:20px;
+   margin-right:20px;
+}

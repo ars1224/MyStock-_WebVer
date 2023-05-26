@@ -4,7 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MyStock | Sign Up</title>
-        <link rel="stylesheet" href="styles_Stock.css">
+        <link rel="stylesheet" href="styles_Stocks.css">
 </head>
 
 <body>
@@ -61,9 +61,83 @@
         </div>  
     </div>
 
-        <div class="add-Item">
-            <button class="addBtn" type="submit" name="AddBtn">ADD ITEMS</button>
-        </div>
+
+            <div class="add-pallet"> 
+                <button id="add-item" class="addBtn" type="submit" name="AddBtn"onclick="openPopUp1()">ADD PALLET</button>
+                    <div class="popUp1" id="PopUp1">
+                        <div class="popHead" >
+                            <p class="pHead">Add A Pallet</p>
+                            <p class="pBody">Fill the Pallet Information Bellow.</p>
+                        </div>
+                        <div class="resizedtextbox1">
+                            <input id="inputs" class="rowBar" type="text" name="row" placeholder="Row" >
+                            <input id="inputs"  class="pltNoBar" type="text" name="row" placeholder="Plt No." >
+                            <input id="inputs"  class="pcodeBar" type="text" name="row" placeholder="Prod. Code" >
+                            <input id="inputs"  class="batchNoBar" type="text" name="row" placeholder="Batch No." >
+                            <input id="inputs"  class="ExpBar" type="text" name="row" placeholder="Expiry" >
+                            <input id="inputs"  class="noCtnBar" type="text" name="row" placeholder="No. of Ctns" >
+                            <input id="inputs"  class="unitsBar" type="text" name="row" placeholder="Units/Ctn" >
+                            <input id="inputs"  class="prtBxBar" type="text" name="row" placeholder="Part Box Qty" >
+                            <input id="inputs"  class="TotalBar" type="text" name="row" placeholder="Total Units" >
+                        </div>
+                        
+                        <div class="addbtn1">
+                            <div class="pop1AddPlt">
+                                <button class="addBtn" type="submit" name="AddBtnPlt">ADD</button>
+                            </div>
+                            
+                            <div class="pop1AddMorePlt">
+                                <button class="addBtn" type="submit" name="AddBtnMore">ADD MORE</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+           <div class="add-unit">
+                <button id="add-item"  class="addBtn" type="submit" name="AddBtnUnits" onclick="openPopUp2()">ADD UNITS</button>
+                <div class="popUp2" id="PopUp2">
+                <div class="popHead" >
+                            <p class="pHead">Add A Unit/s</p>
+                            <p class="pBody">Fill the Pallet location and pruduct Information Bellow.</p>
+                        </div>
+                <div class="resizedtextbox1">
+                    <select name="Prod" class="resizedtextbox" id="drop1">
+                    <option value=""disabled selected hidden>Choose a Row</option>
+                        <option value="Loc">Location</option>
+                    </select>
+                    <select name="Prod" class="resizedtextbox" id="drop1">
+                    <option value=""disabled selected hidden>Choose a Plt No.</option>
+                        <option value="Loc">Location</option>
+                    </select>
+                    <select name="Prod" class="resizedtextbox" id="drop1">
+                        <option value=""disabled selected hidden>Choose a Prod. Code.</option>
+                        <option value="Loc">Location</option>      
+                    </select>
+
+                    <select name="Prod" class="resizedtextbox" id="drop1">
+                        <option value=""disabled selected hidden>Choose a Batch no.</option>
+                        <option value="Loc">Location</option>
+                        <option value="addBatch">add a batch number</option>
+                    </select> 
+
+                    <input id="inputs" class="ExpBarLocked" type="text" name="row" placeholder="Expiry" >
+                    <input id="inputs" class="noCtnBar" type="text" name="row" placeholder="Enter No. of Ctns" >
+                    <input id="inputs" class="unitsBarLocked" type="text" name="row" placeholder="Units/Ctn" >
+                    <input id="inputs" class="prtBxBar" type="text" name="row" placeholder="Enter Part Box Qty" >
+                    <input id="inputs" class="TotalBarLocked" type="text" name="row" placeholder="Total Units" >
+                </div>
+                
+                <div class="addbtn2">
+                    <div class="pop2AddPlt">
+                        <button class="addBtn" type="submit" name="AddBtnPlt">ADD</button>
+                    </div>
+                    
+                    <div class="pop1AddMorePlt">
+                        <button class="addBtn" type="submit" name="AddBtnMore">ADD MORE</button>
+                    </div>
+                </div>
+                </div>
+
   
 
     <div class="inventory">
@@ -115,14 +189,15 @@
                  }
             ?>
             
-        </tbody>
+                </tbody>
 
         
-        </table>
-    </div>
-    </div>
-    </div>
+                </table>
+                </div>
+                </div>
+                </div>
 </body>
+<script type="text/javascript" src="StockScript.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/5c09730e7a.js" crossorigin="anonymous"></script>
 </htmls>
