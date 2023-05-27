@@ -357,3 +357,7 @@
     margin-left:20px;
    margin-right:20px;
 }
+
+#blur{
+    filter: blur(20px);
+}
