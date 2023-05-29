@@ -16,16 +16,3 @@ function pop() {
         let pop2 = document.getElementById('popUP_2');
         pop2.classList.toggle('active');
 }
-
-document.getElementById('myButton').addEventListener('click', function() {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', 'stock.php', true);
-        xhr.onreadystatechange = function() {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-            var response = xhr.responseText;
-            // Process the response here
-            console.log(response);
-          }
-        };
-        xhr.send();
-      });
