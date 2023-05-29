@@ -3,8 +3,8 @@
         <meta charset="=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MyStock | Sign Up</title>
-        <link rel="stylesheet" href="styles_Stocks.css">
+        <title>MyStock | Stock</title>
+        <link rel="stylesheet" href="styles_Stock.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <div class="navi">
             <div class="list">
                 <ul class="home"><a href="home.php" class="home">HOME</a></ul>
-                <ul class="stock"><a href="Stock_page.php"class="Stock">STOCK</a></ul>
+                <ul class="stock"><a href="Stock-page.php"class="Stock">STOCK</a></ul>
                 <ul class="received"><a href="home.php" class="recI">RECEIVED ITEMS</a></ul>
                 <ul class="log"><a href="home.php" class="lg">LOG</a></ul>
             </div>   
@@ -141,16 +141,32 @@
                     <p class="pHead">Add A Pallet</p>
                     <p class="pBody">Fill the Pallet Information Bellow.</p>
                 </div>
+                <?php 
+                  
+                  if(isset($_GET['error'])){
+                    ?>
+                    
+                    <p class="erRor"> 
+                        <?php 
+                        echo $_GET['error']; 
+                        ?> 
+                    </p>
+                    
+                  <?php 
+                }
+                
+                ?>
+
                 <div class="resizedtextbox1">
                     <input id="inputs" class="rowBar" type="text" name="row" placeholder="Row" >
-                    <input id="inputs"  class="pltNoBar" type="text" name="row" placeholder="Plt No." >
-                    <input id="inputs"  class="pcodeBar" type="text" name="row" placeholder="Prod. Code" >
-                    <input id="inputs"  class="batchNoBar" type="text" name="row" placeholder="Batch No." >
-                    <input id="inputs"  class="ExpBar" type="text" name="row" placeholder="Expiry" >
-                    <input id="inputs"  class="noCtnBar" type="text" name="row" placeholder="No. of Ctns" >
-                    <input id="inputs"  class="unitsBar" type="text" name="row" placeholder="Units/Ctn" >
-                    <input id="inputs"  class="prtBxBar" type="text" name="row" placeholder="Part Box Qty" >
-                    <input id="inputs"  class="TotalBar" type="text" name="row" placeholder="Total Units" >
+                    <input id="inputs"  class="pltNoBar" type="integer" name="pltno" placeholder="Plt No." >
+                    <input id="inputs"  class="pcodeBar" type="text" name="pCode" placeholder="Prod. Code" >
+                    <input id="inputs"  class="batchNoBar" type="text" name="batch" placeholder="Batch No." >
+                    <input id="inputs"  class="ExpBar" type="text" name="exp" placeholder="Expiry" >
+                    <input id="inputs"  class="noCtnBar" type="text" name="NoCtns" placeholder="No. of Ctns" >
+                    <input id="inputs"  class="unitsBar" type="text" name="units" placeholder="Units/Ctn" >
+                    <input id="inputs"  class="prtBxBar" type="text" name="prtBx" placeholder="Part Box Qty" >
+                    <input id="inputs"  class="TotalBar" type="text" name="total" placeholder="Total Units" >
                 </div>
                                 
                 <div class="addbtn1">
@@ -202,7 +218,7 @@
                 
                 <div class="addbtn2">
                     <div class="pop2AddPlt">
-                        <button class="addBtn" type="submit" name="AddBtnPlt">ADD</button>
+                        <button id="myButton" class="addBtn" type="submit" name="AddBtnPlt">ADD</button>
                     </div>
                     
                     <div class="pop1AddMorePlt">

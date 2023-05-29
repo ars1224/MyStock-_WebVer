@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 50px;
+    max-width: 100% ;   
+}
+
+nav{
+    position: fixed;
+    width: 100% ; 
+    top: 0;
+}
+
+nav{
+    background-color: rgb(8, 160, 71);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+}
+
+.list,.navi{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 40px;
+}
+
+ul{
+    padding-left: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.list{  
+    padding-right: 50px;
+    font-weight: 700;
+}
+
+.fa-regular{
+    font-size: 25px;
+    border-style:solid;
+    border-radius: 50%;
+    border-color: aliceblue;
+    padding: 5px;
+}
+
+#blur.active{
+    filter: blur(20px);
+}
+
+.tag, .home, .Stock, .recI, .lg{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.update, .Del{
+    text-decoration: none;
+    color: black;
+}
+
+.home :hover,.stock :hover, .received :hover,.log :hover{
+    opacity: .7;
+color: #34db87;
+}
+
+.navi, ul{
+    font-size: 15px;
+}
+
+.inventory{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.content{
+    margin-top: 50px;
+}
+
+
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+    margin-left: 25px;
+    
+
+}
+.add-item{
+   display: flex;
+   justify-content: end;
+   margin-top: -35px;
+   margin-right: 25px;
+}
+.inventory{
+    margin-top: 50px;
+}
+.searchBar{
+    width: 250px;
+     border-radius: 10px;
+     border: 1px solid grey;
+     font-weight: 500;
+     height: 30px;
+     
+}
+
+.resizedtextbox{
+    width: 180px;
+     border-radius: 10px;
+     border: 1px solid grey;
+     font-weight: 500;
+     height: 30px;
+     color: grey;
+}
+
+.searchBtn{
+  cursor: pointer;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-weight: 500;
+    height: 30px;
+    color: grey;
+    box-shadow:0 2px 3px rgba(0, 0, 0, 0.6) ;
+}
+
+.addBtn{
+    cursor: pointer;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    font-weight: 500;
+    height: 30px;
+    color: grey;
+    box-shadow:0 2px 3px rgba(0, 0, 0, 0.6) ;
+}
+
+.search, .drop, .search-Btn{
+    padding-left: 10px;
+}
+
+th,td{
+    border:2px solid rgb(255, 255, 255);
+    padding:5px;
+    padding-left: px;
+    padding-right: px;
+    text-align: center;
+    text-justify:auto;
+    
+}
+
+table{
+    margin-top  :2px;
+    margin-left  : 0px;
+    margin-right  : 0px;
+    margin-bottom  : 5px;
+    width: 100%;
+}
+.table-wraper{
+    background-color: grey;
+    padding: 5px;
+    width: 95%;
+}
+tbody,thead{
+    padding: 100px;
+}
+th,td{
+    background-color: white;
+}
+tr{
+    max-block-size: 5px;
+}
+
+.headRow{
+    position: sticky;
+    top: 0px;
+    background-color: white;
+}
+
+a.update{
+    border-color: rgba(4, 31, 80, 0.795);
+    background-color: rgb(53, 127, 236);
+    color: aliceblue;
+    padding: 5px;
+    text-align: center;
+    text-justify: auto;
+    padding-left: 5px;
+}
+
+a.Del{
+    border-color: rgba(85, 2, 13, 0.795);
+    background-color: rgb(226, 31, 31);
+    color: aliceblue;
+    padding: 5px;
+    text-align: center;
+    text-justify: auto;
+    padding-left: 5px;
+}
+
+.action{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    max-height: 10px;
+}
+.ups,.del{
+padding-right: 10px;
+}
+
+.table-wraper{
+margin-bottom: 20px;
+height: 695px;
+overflow-y: scroll;
+}
+
+.whName{
+display: flex;
+flex-direction: row;
+align-items: center;
+margin-top: 120px; 
+justify-content: start;
+margin-left:25px
+}
+
+.name,.Wh{
+padding-left: 10px;
+align-items: center;
+justify-content: center;
+}
+
+.name{
+font-size: 20px;
+font-weight: 600;
+}
+
+.Wh{
+align-items: center;
+justify-content: center;
+}
+
+#addItems.hide{
+visibility: hidden;
+cursor: default;
+}
+
+.choose{
+cursor: pointer;
+border: none;
+background-color:transparent ;
+color: rgb(6, 230, 100);
+font-size: 25px;
+font-weight: 700;
+text-decoration: black;
+text-shadow:0 2px 2px rgba(0, 0, 0, 0.6) ;
+}
+
+.arrows{
+display: flex;
+flex-direction: column;
+padding-left: 10px;
+}
+
+.up,.down{
+font-size: 13px;
+color:rgb(6, 230, 100); 
+cursor: pointer;
+text-shadow:0 1px 1px rgba(0, 0, 0, 0.6) ;
+}
+
+
+.popUp1{
+position: fixed;
+top: 10%;
+left:45%;
+display: flex;
+justify-content:center;
+align-items: center;
+flex-direction: column;
+}
+
+.popUp2{
+position: fixed;
+top: 10%;
+left:45%;
+display: flex;
+justify-content:center;
+align-items: center;
+flex-direction: column;
+}
+
+.popUp1,.popUp2{
+background-color: rgb(253, 253, 253);
+border-radius: 30px;
+border-style: dashed;
+border-color: #34db87;
+max-height: fit-content;
+padding: 30px;
+max-width: 300px;
+}
+
+.popUp1{
+visibility: hidden;
+}
+
+#PopUp_1.active{
+visibility: visible;
+}
+
+.popUp2{
+visibility: hidden;
+}
+
+#popUP_2.active{
+visibility: visible;
+}
+
+.choices{
+position: fixed;
+top: 50%;
+left:45%;
+display: flex;
+justify-content:center;
+align-items: center;
+flex-direction: row;
+background-color: rgb(253, 253, 253);
+border-radius: 30px;
+border-style: dashed;
+border-color: #34db87;
+max-height: fit-content;
+padding: 30px;
+max-width: 300px;
+}
+
+#choice{
+visibility: hidden;
+}
+
+#choice.active{
+visibility: visible;
+}
+
+.pophead{
+text-align: center;
+text-justify: auto;
+font-weight: 500;
+font-size: 20px;
+}
+
+.resizedtextbox1{
+margin-top: 50px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#inputs,#drop1{
+margin-top: 20px;
+font-size: 15px;
+padding: 3px;
+}
+
+.addbtn1,.addbtn2{
+display: flex;
+flex-direction: row;
+margin-top: 50px;
+
+}
+
+.addBtn{
+font-size: 15px;
+height: 40px;
+width: 100px;
+margin-left:20px;
+margin-right:20px;
+}
+
+.erRor{
+    background-color: rgb(240, 132, 132);
+    color: aliceblue;
+    border-radius: 5px;
+    padding: 5px;
+  }
