@@ -2,7 +2,7 @@
 
 include "conn_Stock_db.php";
 
-if(isset($_POST['AddBtnPlt'])){
+if(isset($_POST['AddPlt'])){
     $Row = $_POST['row'];
     $Plt = $_POST['pltno'];
     $code = $_POST['pCode'];
