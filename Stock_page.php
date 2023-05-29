@@ -66,8 +66,7 @@
         </div>
         
         <div class="add-Item">
-            <button id="addItems"class="addBtn" type="button" name="AddBtn" onclick="toggle()">ADD PALLET</button>
-            <button id="addItems" class="addBtn" type="button" name="AddBtnUnits" onclick="toggle()" onclick="toggle()">ADD UNITS</button>
+            <button id="addItems"class="addBtn" type="button" name="AddBtn" onclick="toggle()">ADD ITEM</button>
         </div>
         
         
@@ -125,6 +124,17 @@
             </div>
         </div>
     </div></div>
+
+    <div class="choices" id="choice">
+        <div class="addPlt">
+            <button id="PltAdd" class="addBtn" type="button" name="AddBtnMore" onclick="show()">Add a Pallet</button>
+        </div>
+        or
+        <div class="addUnits">
+            <button class="addBtn" type="button" name="AddBtnMore" onclick="pop()" >Add a Unit</button>
+        </div>
+    </div>
+
         <div class="add-pallet"> 
             <div class="popUp1" id="PopUp_1">
                 <div class="popHead" >
