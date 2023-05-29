@@ -171,7 +171,7 @@
                                 
                 <div class="addbtn1">
                     <div class="pop1AddPlt">
-                        <button class="addBtn" type="submit" name="AddBtnPlt">ADD</button>
+                        <button id="myButton" class="addBtn" type="submit" name="AddBtnPlt">ADD</button>
                     </div>
                     
                     <div class="pop1AddMorePlt">
@@ -218,7 +218,7 @@
                 
                 <div class="addbtn2">
                     <div class="pop2AddPlt">
-                        <button id="myButton" class="addBtn" type="submit" name="AddBtnPlt">ADD</button>
+                        <button class="addBtn" type="submit" name="AddBtnPlt" >ADD</button>
                     </div>
                     
                     <div class="pop1AddMorePlt">
