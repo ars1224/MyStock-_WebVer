@@ -8,6 +8,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    background-color: #b4b4b4;
+}
 /*navigation*/
 nav{
     display: flex;
@@ -91,6 +94,7 @@ color: #34db87;
     border-color: grey;
     box-shadow: 0 10px 9px rgba(0, 0, 0, 0.6);
     padding: 50px;
+    background-color: rgb(255, 255, 255);
     }
 
 
@@ -118,7 +122,7 @@ display: flex;
 flex-direction: column;
  }
     
-    #inputs{
+    #inputs,#dateInput{
     margin-top: 10px;
     font-size: 15px;
     padding: 3px;
@@ -139,3 +143,17 @@ flex-direction: column;
     margin-right:20px;
     }
 
+    .erRor{
+        background-color: rgb(240, 132, 132);
+        color: aliceblue;
+        border-radius: 5px;
+        padding: 5px;
+      }
+
+      .date{
+        width: 60%;
+        border-color: grey; 
+        color: grey;
+        border-style: solid 1px;
+      }
+      

@@ -27,6 +27,7 @@
 
             <div class="add-pallet"> 
                 <div class="popUp1" id="PopUp_1">
+                <form action="stock.php" class="AddFrm" method="post">
                     <div class="popHead" >
                         <p class="pHead">Add A Pallet!</p>
                         <p class="pBody">Fill the Pallet Information Bellow.</p>
@@ -41,27 +42,26 @@
                             echo $_GET['error']; 
                             ?> 
                         </p>
-                        
                       <?php 
                     }
                     
                     ?>
     
                     <div class="resizedtextbox1">
-                        <input id="inputs" class="rowBar" type="text" name="row" placeholder="Row" >
-                        <input id="inputs"  class="pltNoBar" type="integer" name="pltno" placeholder="Plt No." >
-                        <input id="inputs"  class="pcodeBar" type="text" name="pCode" placeholder="Prod. Code" >
-                        <input id="inputs"  class="batchNoBar" type="text" name="batch" placeholder="Batch No." >
-                        <input id="inputs"  class="ExpBar" type="text" name="exp" placeholder="Expiry" >
-                        <input id="inputs"  class="noCtnBar" type="text" name="NoCtns" placeholder="No. of Ctns" >
-                        <input id="inputs"  class="unitsBar" type="text" name="units" placeholder="Units/Ctn" >
-                        <input id="inputs"  class="prtBxBar" type="text" name="prtBx" placeholder="Part Box Qty" >
-                        <input id="inputs"  class="TotalBar" type="text" name="total" placeholder="Total Units" >
+                        <input id="inputs"  name="rowBar" type="text"  placeholder="Row" >
+                        <input id="inputs"  name="pltNoBar" type="number"  placeholder="Plt No." >
+                        <input id="inputs"  name="pcodeBar" type="text"  placeholder="Prod. Code" >
+                        <input id="inputs"  name="batchNoBar" type="text"  placeholder="Batch No." >
+                        <input id="dateInput" class="date"  name="ExpBar" type="DATE"  placeholder="Expiry" >
+                        <input id="inputs"  name="noCtnBar" type="number"  placeholder="No. of Ctns" >
+                        <input id="inputs"  name="unitsBar" type="number"  placeholder="Units/Ctn" >
+                        <input id="inputs"  name="prtBxBar" type="number"  placeholder="Part Box Qty" >
+                        <input id="inputs"  name="TotalBar" type="number"  placeholder="Total Units" >
                     </div>
                                     
                     <div class="addbtn1">
                         <div class="pop1AddPlt">
-                            <button id="myButton" class="addBtn" type="submit" name="AddBtnPlt">ADD</button>
+                            <button class="addBtn" type="submit" name="SubmitBtn">ADD</button>
                         </div>
                         
                         <div class="pop1AddMorePlt">
@@ -71,6 +71,6 @@
                 </div>
             </div>
     </body>
-<script src="StockScript.js"></script>
+    <script src="StockScript.js"></script>
 <script src="https://kit.fontawesome.com/5c09730e7a.js" crossorigin="anonymous"></script>
 </html>

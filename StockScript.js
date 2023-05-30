@@ -7,12 +7,11 @@ function toggle(){
         hide.classList.toggle('hide');
 }
 
-function show() {
-  let pop1 = document.getElementById('PopUp_1');
-  pop1.classList.toggle('active');
-}
+var dateInput = document.getElementById('dateInput');
 
-function pop() {
-        let pop2 = document.getElementById('popUP_2');
-        pop2.classList.toggle('active');
-}
+// Add event listener to format the date on input change
+dateInput.addEventListener('input', function() {
+  var inputDate = new Date(this.value);
+  var formattedDate = inputDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' });
+  this.value = formattedDate;
+});

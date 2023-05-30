@@ -127,7 +127,7 @@
 
     <div class="choices" id="choice">
         <div class="addPlt">
-            <button id="PltAdd" class="addBtn" type="button" name="AddBtnMore" onclick="show()">Add a Pallet</button>
+           <a href="Stock-Page_Add a Pallet.php"> <button id="PltAdd" class="addBtn" type="link" name="AddBtnMore" onclick="show()" >Add a Pallet</button></a>
         </div>
         or
         <div class="addUnits">
