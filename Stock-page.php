@@ -29,7 +29,13 @@
         <div class="name">Warehouse:</div>
 
         <div class="Wh">
-            <button class="choose">Choose a Warehouse</button>
+            <select class="choose">
+            <option value=""disabled selected hidden>Choose a Warehouse</option>
+            <option id="pd"value="pd">Pereita Drive</option>
+            <option id="hd"value="hd">Hynds Drive</option>
+            <option id="vtl"value="vtl">VTL</option>
+            <option id="chrtr"value="chrtr">Charter</option>
+            </select>
         </div>
 
         <div class="arrows">

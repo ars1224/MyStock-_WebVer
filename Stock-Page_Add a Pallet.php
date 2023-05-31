@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MyStock | Stock_Add a Pallet</title>
-        <link rel="stylesheet" href="styles_Stock-AddPallet.css">
+        <link rel="stylesheet" href="styles_Stock-AddPallets.css">
     </head>
 
     <body>
@@ -53,15 +53,15 @@
                         <input class="inputs"  name="pcodeBar" type="text"  placeholder="Prod. Code" >
                         <input class="inputs"  name="batchNoBar" type="text"  placeholder="Batch No." >
                         <input class="inputs" id="date"  name="ExpBar" type="date"  placeholder="Expiry" value="YYYY-MM-DD">
-                        <input id="NoCtn" class="inputs"  name="noCtnBar" type="number"  placeholder="No. of Ctns" >
-                        <input id="Units" class="inputs"  name="unitsBar" type="number"  placeholder="Units/Ctn" >
-                        <input id="prtBx" class="inputs"  name="prtBxBar" type="number"  placeholder="Part Box Qty" >
-                        <input id="Total" class="inputs"  name="TotalBar" type="number"  placeholder="Total Units"  readonly>
+                        <input id="Num1" class="inputs"  name="noCtnBar" type="text"  placeholder="No. of Ctns" >
+                        <input id="Num2" class="inputs"  name="unitsBar" type="text"  placeholder="Units/Ctn" >
+                        <input id="Num3" class="inputs"  name="prtBxBar" type="text"  placeholder="Part Box Qty" >
+                        <input id="result" class="inputs"  name="TotalBar" type="text" placeholder="Total Qty" readonly>
                     </div>
                                     
                     <div class="addbtn1">
                         <div class="pop1AddPlt">
-                            <button class="addBtn" type="submit" name="SubmitBtn">ADD</button>
+                            <button id="AddBtn" class="addBtn" type="submit" name="SubmitBtn">ADD</button>
                         </div>
                         
                         <div class="pop1AddMorePlt">

@@ -64,3 +64,12 @@ else{
     header("Location: Stock-Page_Add a Pallet.php.php");
     exit();
 }
+?>
+<?php
+
+$Row = $_POST['rowBar'];
+
+foreach(range(!'A','Z') as $Row){
+    header("Location: Stock-Page_Add a Pallet.php");
+    exit();
+   }
