@@ -7,11 +7,16 @@ function toggle(){
         hide.classList.toggle('hide');
 }
 
-var dateInput = document.getElementById('dateInput');
-
-// Add event listener to format the date on input change
-dateInput.addEventListener('input', function() {
-  var inputDate = new Date(this.value);
-  var formattedDate = inputDate.toLocaleDateString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit' });
-  this.value = formattedDate;
-});
+function changeDateFormat() {
+  // Get the input value from the text box
+  var inputDate = document.getElementById("dateInput").value;
+  
+  // Create a Date object using the input value
+  var date = new Date(inputDate);
+  
+  // Create the desired date format
+  var outputDate = date.toISOString().split('T')[0];
+  
+  // Set the formatted date as the new value in the text box
+  document.getElementById("dateInput").value = outputDate;
+}
