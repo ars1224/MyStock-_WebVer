@@ -13,6 +13,10 @@ if(isset($_POST['SubmitBtn'])){
     $PrtBox = $_POST['prtBxBar'];
     $total = $_POST['TotalBar'];
 
+    $uppercaseText1 = strtoupper($Row);
+    $uppercaseText2 = strtoupper($code);
+    $uppercaseText3 = strtoupper($batch);
+
     if(empty($Row)){
         header("Location: Stock-Page_Add a Pallet.php?error=Input a valid ROW!");
         exit();
@@ -48,7 +52,7 @@ if(isset($_POST['SubmitBtn'])){
         exit();
     }
     else{
-        $sql= "INSERT INTO `wh1`(`ROW`, `Plt_No`, `Product_code`, `Batch_No`, `Expiry`, `No_Ctns`, `Units`, `Part_box`, `Total_Qty`) VALUES ('$Row','$Plt','$code','$batch','$Exp','$NoCtn','$Units','$PrtBox','$total')";
+        $sql= "INSERT INTO `wh1`(`ROW`, `Plt_No`, `Product_code`, `Batch_No`, `Expiry`, `No_Ctns`, `Units`, `Part_box`, `Total_Qty`) VALUES ('$uppercaseText1','$Plt','$uppercaseText2','$uppercaseText3','$Exp','$NoCtn','$Units','$PrtBox','$total')";
         $result = mysqli_query($conn, $sql);
 
         if($result){
@@ -64,12 +68,5 @@ else{
     header("Location: Stock-Page_Add a Pallet.php.php");
     exit();
 }
-?>
-<?php
 
-$Row = $_POST['rowBar'];
 
-foreach(range(!'A','Z') as $Row){
-    header("Location: Stock-Page_Add a Pallet.php");
-    exit();
-   }
