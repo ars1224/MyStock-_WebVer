@@ -7,3 +7,25 @@ function toggle(){
         hide.classList.toggle('hide');
 }
 
+let ans = document.getElementById('Total');
+let x = document.getElementById('NoCtn');
+let y = document.getElementById('Units');
+let z = document.getElementById('PrtBx');
+
+x.addEventListener('input', calculateResult);
+y.addEventListener('input', calculateResult);
+z.addEventListener('input', calculateResult);
+
+function calculateResult(){
+        var a = parseFloat(x.value);
+        var b = parseFloat(y.value);
+        var c = parseFloat(z.value);
+        var res = a * b + c;
+
+        if(!isNaN(res)){
+                ans.value = res;
+        }
+        else {
+                ans.value = '';
+        }
+}

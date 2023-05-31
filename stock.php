@@ -14,37 +14,32 @@ if(isset($_POST['SubmitBtn'])){
     $total = $_POST['TotalBar'];
 
     if(empty($Row)){
-        header("Location: Stock-Page_Add a Pallet.php?error=Input a valid Usernname!");
+        header("Location: Stock-Page_Add a Pallet.php?error=Input a valid ROW!");
         exit();
     }
     
     else if(empty($Plt)){
-        header("Location: Stock-Page_Add a Pallet.php?error=Input a valid Pass!");
+        header("Location: Stock-Page_Add a Pallet.php?error=Input a valid PALLET NUMBER!");
         exit();
     }
     
     else if(empty($code)){
-        header("Location: Stock-Page_Add a Pallet.php?error=Input a valid Name!");
+        header("Location: Stock-Page_Add a Pallet.php?error=Input a valid PRODUCT CODE!");
         exit();
     }
     
     else if(empty($Exp)){
-        header("Location: Stock-Page_Add a Pallet.php?error=Input a valid Department!");
+        header("Location: Stock-Page_Add a Pallet.php?error=Input a valid EXPIRY DATE!");
         exit();
     }
 
     else if(empty($NoCtn)){
-        header("Location: Stock-Page_Add a Pallet.php?error=Input a valid Department!");
+        header("Location: Stock-Page_Add a Pallet.php?error= SPECIFY HOW MANY CARTONS PER PALLET!");
         exit();
     }
     
     else if(empty($Units)){
-        header("Location: Stock-Page_Add a Pallet.php?error=Input a valid Department!");
-        exit();
-    }
-
-    else if(empty($PrtBox)){
-        header("Location: Stock-Page_Add a Pallet.php?error=Input a valid Department!");
+        header("Location: Stock-Page_Add a Pallet.php?error=SPECIFY HOW MANY UNITS PER BOX!");
         exit();
     }
 

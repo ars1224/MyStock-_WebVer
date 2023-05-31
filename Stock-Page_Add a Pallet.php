@@ -48,15 +48,15 @@
                     ?>
     
                     <div class="resizedtextbox1">
-                        <input id="inputs"  name="rowBar" type="text"  placeholder="Row" >
-                        <input id="inputs"  name="pltNoBar" type="number"  placeholder="Plt No." >
-                        <input id="inputs"  name="pcodeBar" type="text"  placeholder="Prod. Code" >
-                        <input id="inputs"  name="batchNoBar" type="text"  placeholder="Batch No." >
-                        <input id="dateInput" class="date"  name="ExpBar" type="date"  placeholder="Expiry" value="YYYY-MM-DD">
-                        <input id="inputs"  name="noCtnBar" type="number"  placeholder="No. of Ctns" >
-                        <input id="inputs"  name="unitsBar" type="number"  placeholder="Units/Ctn" >
-                        <input id="inputs"  name="prtBxBar" type="number"  placeholder="Part Box Qty" >
-                        <input id="inputs"  name="TotalBar" type="number"  placeholder="Total Units" >
+                        <input class="inputs"  name="rowBar" type="text"  placeholder="Row" >
+                        <input class="inputs"  name="pltNoBar" type="number"  placeholder="Plt No." >
+                        <input class="inputs"  name="pcodeBar" type="text"  placeholder="Prod. Code" >
+                        <input class="inputs"  name="batchNoBar" type="text"  placeholder="Batch No." >
+                        <input class="inputs" id="date"  name="ExpBar" type="date"  placeholder="Expiry" value="YYYY-MM-DD">
+                        <input id="NoCtn" class="inputs"  name="noCtnBar" type="number"  placeholder="No. of Ctns" >
+                        <input id="Units" class="inputs"  name="unitsBar" type="number"  placeholder="Units/Ctn" >
+                        <input id="prtBx" class="inputs"  name="prtBxBar" type="number"  placeholder="Part Box Qty" >
+                        <input id="Total" class="inputs"  name="TotalBar" type="number"  placeholder="Total Units"  readonly>
                     </div>
                                     
                     <div class="addbtn1">
