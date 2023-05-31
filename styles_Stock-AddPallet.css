@@ -152,8 +152,6 @@ flex-direction: column;
 
       .date{
         width: 60%;
-        border-color: grey; 
         color: grey;
-        border-style: solid 1px;
       }
       
