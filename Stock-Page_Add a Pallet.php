@@ -15,7 +15,7 @@
             <div class="navi">
                 <div class="list">
                     <ul class="home"><a href="home.php" class="home">HOME</a></ul>
-                    <ul class="stock"><a href="Stock-page.php"class="Stock">STOCK</a></ul>
+                    <ul class="stock"><a href="Stock-pages.php"class="Stock">STOCK</a></ul>
                     <ul class="received"><a href="home.php" class="recI">RECEIVED ITEMS</a></ul>
                     <ul class="log"><a href="home.php" class="lg">LOG</a></ul>
                 </div>   
@@ -71,6 +71,6 @@
                 </div>
             </div>
     </body>
-    <script src="StockScript.js"></script>
+    <script src="StockScripts.js"></script>
 <script src="https://kit.fontawesome.com/5c09730e7a.js" crossorigin="anonymous"></script>
 </html>

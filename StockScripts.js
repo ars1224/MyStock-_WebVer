@@ -1,10 +1,15 @@
 function toggle(){
         var blurr = document.getElementById('blur');
         blurr.classList.toggle('active');
-        var choice = document.getElementById('choice');
-        choice.classList.toggle('active');
-        var hide = document.getElementById('addItems');
-        hide.classList.toggle('hide');
+
+        var hide = document.getElementById('deleteBtn')
+        hide.classList.toggle('remove')
+
+        var show = document.getElementById('Show');
+        show.classList.toggle('pop')
+
+        var back = document.getElementById('Show');
+        back.classList.toggle('ext')
 }
 
 let x = document.getElementById('Num1');
@@ -14,7 +19,7 @@ let ans = document.getElementById('result');
 
 x.addEventListener('input', calculateResult);
 y.addEventListener('input', calculateResult);
-z.addEventListener('input', calculateResult);
+z.addEventListener('input',0, calculateResult);
 
 function calculateResult() {
   var num1 = parseFloat(x.value);  // Use x.value instead of num1.value

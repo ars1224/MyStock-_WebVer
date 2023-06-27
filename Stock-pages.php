@@ -4,7 +4,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MyStock | Stock</title>
-        <link rel="stylesheet" href="styles_Stock.css">
+        <link rel="stylesheet" href="styles_Stocks.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <div class="navi">
             <div class="list">
                 <ul class="home"><a href="home.php" class="home">HOME</a></ul>
-                <ul class="stock"><a href="Stock-page.php"class="Stock">STOCK</a></ul>
+                <ul class="stock"><a href="Stock-pages.php"class="Stock">STOCK</a></ul>
                 <ul class="received"><a href="home.php" class="recI">RECEIVED ITEMS</a></ul>
                 <ul class="log"><a href="home.php" class="lg">LOG</a></ul>
             </div>   
@@ -72,7 +72,8 @@
         </div>
         
         <div class="add-Item">
-        <a href="Stock-Page_Add a Pallet.php"><button id="PltAdd" class="addBtn" type="link" name="AddBtnMore" onclick="show()">ADD ITEM</button></a>
+        <a href="Stock-Page_Add a Pallet.php"><button id="PltAdd" class="addBtn" type="link">Add Pallet</button></a>
+        <button id="deleteBtn" class="delBtn" type="button" name="delBtn" onclick="toggle()">Delete</button>
         </div>
         
         
@@ -128,16 +129,33 @@
                 </table>
             </div>
         </div>
-    </div></div>
+    </div>
+
+    
     
     <div class="footer">
         <footer>
             <h6>Total Ctn:</h6><p id="CtnTotal">;</p>
             <h6>Total units:</h6><p id="UnitsTotal">;</p>
         </footer>
+    </div></div>
+    
+    <div id="Show" class="show">
+        <p>Reason to delete</p>
+        <select class="reason">
+            <option value=""disabled selected hidden>Choose Here!</option>
+            <option id="sent"value="sent">Sending to</option>
+            <option id="trans"value="trans">Transfering to</option>
+            <option id="exp"value="exp">Expired</option>
+            <option id="other"value="other">other</option>
+        </select>
+        <input type="text" class="textAns" name="TextReason">
+        <input type="text" class="textAnsLong" name="TextReason">
+        <input type="date" class="expDate" name="dateReason">
+        <button type="submit" class="ReasonBtn" id="reasonbtn" onclick="toggle()">Submit</button>
     </div>
 </body>
-<script src="StockScript.js"></script>
+<script src="StockScripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/5c09730e7a.js" crossorigin="anonymous"></script>
 </html>

@@ -61,6 +61,10 @@ ul{
     filter: blur(20px);
 }
 
+#blur.ext{
+    filter: blur(0);
+}
+
 .tag, .home, .Stock, .recI, .lg{
     text-decoration: none;
     color: rgb(255, 255, 255);
@@ -101,6 +105,7 @@ color: #34db87;
 }
 .add-item{
    display: flex;
+   flex-direction: row-reverse;
    justify-content: end;
    margin-top: -35px;
    margin-right: 25px;
@@ -137,7 +142,7 @@ color: #34db87;
     box-shadow:0 2px 3px rgba(0, 0, 0, 0.6) ;
 }
 
-.addBtn{
+.addBtn,.delBtn{
     cursor: pointer;
     width: 100px;
     border-radius: 10px;
@@ -252,11 +257,6 @@ align-items: center;
 justify-content: center;
 }
 
-#addItems.hide{
-visibility: hidden;
-cursor: default;
-}
-
 .choose{
 cursor: pointer;
 border: none;
@@ -282,83 +282,7 @@ text-shadow:0 1px 1px rgba(0, 0, 0, 0.6) ;
 }
 
 
-.popUp1{
-position: fixed;
-top: 10%;
-left:45%;
-display: flex;
-justify-content:center;
-align-items: center;
-flex-direction: column;
-}
 
-.popUp2{
-position: fixed;
-top: 10%;
-left:45%;
-display: flex;
-justify-content:center;
-align-items: center;
-flex-direction: column;
-}
-
-.popUp1,.popUp2{
-background-color: rgb(253, 253, 253);
-border-radius: 30px;
-border-style: dashed;
-border-color: #34db87;
-max-height: fit-content;
-padding: 30px;
-max-width: 300px;
-}
-
-.popUp1{
-visibility: hidden;
-}
-
-#PopUp_1.active{
-visibility: visible;
-}
-
-.popUp2{
-visibility: hidden;
-}
-
-#popUP_2.active{
-visibility: visible;
-}
-
-.choices{
-position: fixed;
-top: 50%;
-left:45%;
-display: flex;
-justify-content:center;
-align-items: center;
-flex-direction: row;
-background-color: rgb(253, 253, 253);
-border-radius: 30px;
-border-style: dashed;
-border-color: #34db87;
-max-height: fit-content;
-padding: 30px;
-max-width: 300px;
-}
-
-#choice{
-visibility: hidden;
-}
-
-#choice.active{
-visibility: visible;
-}
-
-.pophead{
-text-align: center;
-text-justify: auto;
-font-weight: 500;
-font-size: 20px;
-}
 
 .resizedtextbox1{
 margin-top: 50px;
@@ -380,12 +304,22 @@ margin-top: 50px;
 
 }
 
-.addBtn{
+.addBtn,.delBtn{
 font-size: 15px;
 height: 40px;
 width: 100px;
 margin-left:20px;
 margin-right:20px;
+}
+
+.delBtn{
+    background-color: red;
+    color: #ffffff;
+    font-weight: 450;
+}
+
+.delBtn.remove{
+    visibility: hidden;
 }
 
 .erRor{
@@ -407,3 +341,46 @@ footer{
             bottom: 0;
             width: 100%;
 }
+
+.show{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 15%;
+    margin-left: 40%;
+    background-color: white;
+    border-radius: 20px;
+    border-color: grey;
+    box-shadow: 0 10px 9px rgba(0, 0, 0, 0.6);
+    padding: 40px;
+}
+
+.show{
+    display: none;
+}
+
+#Show.pop{
+    display: flex;
+}
+
+#Show.ext{
+    display: flex;
+}
+
+.textAns,.textAnsLong,.expDate{
+    visibility: hidden;
+}
+.show p, .reason,.textAns,.expDate,.ReasonBtn,.textAnsLong{
+    margin-top: 20px;
+}
+
+.reason,.textAns,.expDate,.textAnsLong{
+    width: 250px;
+}
+
+.textAnsLong{
+    height: 50px;
+}
+
