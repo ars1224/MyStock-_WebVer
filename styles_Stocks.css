@@ -312,15 +312,8 @@ margin-left:20px;
 margin-right:20px;
 }
 
-.delBtn{
-    background-color: red;
-    color: #ffffff;
-    font-weight: 450;
-}
 
-.delBtn.remove{
-    visibility: hidden;
-}
+
 
 .erRor{
     background-color: rgb(240, 132, 132);

@@ -82,7 +82,7 @@
                 <table class="StockSheet">
                     <thead>
                         <tr class="headRow">
-                            <th class="chckbx"><input type="checkbox">         </th>
+                            <th class="chckbx"><input type="checkbox" id="checkbox">         </th>
                             <th class="headr0">Row         </th>
                             <th class="headr1">Pallet No.  </th>
                             <th class="headr2">Product Code</th>

@@ -10,6 +10,9 @@ function toggle(){
 
         var back = document.getElementById('Show');
         back.classList.toggle('ext')
+
+        var popUp = document.getElementById('checkbox');
+        popUp.classList.toggle('check')
 }
 
 let x = document.getElementById('Num1');
@@ -33,6 +36,7 @@ function calculateResult() {
     ans.value = '';
   }
 }
+
 
 
 
