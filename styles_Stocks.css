@@ -312,7 +312,15 @@ margin-left:20px;
 margin-right:20px;
 }
 
+#deleteBtn{
+    background-color: red;
+    color: #ffffff;
+    font-weight: 450;
+}
 
+#deleteBtn {
+    display: none;
+}
 
 
 .erRor{

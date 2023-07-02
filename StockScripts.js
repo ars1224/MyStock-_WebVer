@@ -10,9 +10,6 @@ function toggle(){
 
         var back = document.getElementById('Show');
         back.classList.toggle('ext')
-
-        var popUp = document.getElementById('checkbox');
-        popUp.classList.toggle('check')
 }
 
 let x = document.getElementById('Num1');
@@ -36,6 +33,17 @@ function calculateResult() {
     ans.value = '';
   }
 }
+
+const checkbox = document.getElementById('checkbox');
+const button = document.getElementById('deleteBtn');
+
+checkbox.addEventListener('change', function() {
+  if (checkbox.checked) {
+    button.style.display = 'block'; // Show the button
+  } else {
+    button.style.display = 'none'; // Hide the button
+  }
+});
 
 
 
