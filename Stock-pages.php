@@ -80,51 +80,53 @@
         <div class="inventory">
             <div class="table-wraper">
                 <table class="StockSheet">
-                    <thead>
-                        <tr class="headRow">
-                            <th class="chckbx"><input type="checkbox" id="checkbox" onchange="change()">         </th>
-                            <th class="headr0">Row         </th>
-                            <th class="headr1">Pallet No.  </th>
-                            <th class="headr2">Product Code</th>
-                            <th class="headr3">Batch    No.</th>
-                            <th class="headr4">Expiry date </th> 
-                            <th class="headr5">Ctns/Plt    </th>
-                            <th class="headr6">Units/Ctn   </th>
-                            <th class="headr7">Part Box Qty</th>
-                            <th class="headr8">Total Qty   </th>
-                            <th class="headr9">Action      </th>
-                        </tr>
-                    </thead>
-                    
-                    <tbody>
-                        <?php
+                <thead>
+    <tr class="headRow">
+        <th class="chckbx"><input type="checkbox" id="checkbox" onclick="toggleBtn()"></th>
+        <th class="headr0">Row</th>
+        <th class="headr1">Pallet No.</th>
+        <th class="headr2">Product Code</th>
+        <th class="headr3">Batch No.</th>
+        <th class="headr4">Expiry date</th>
+        <th class="headr5">Ctns/Plt</th>
+        <th class="headr6">Units/Ctn</th>
+        <th class="headr7">Part Box Qty</th>
+        <th class="headr8">Total Qty</th>
+        <th class="headr9">Action</th>
+    </tr>
+</thead>
 
-                        include "conn_Stock_db.php";
+<tbody>
+    <?php
+    include "conn_Stock_db.php";
+    $sql = "SELECT * FROM wh1";
+    $result = $conn->query($sql);
 
-                        $sql = "SELECT * FROM wh1";
-                        $result = $conn->query($sql); 
+    while ($row = $result->fetch_assoc()) {
+        $rowId = $row["ROW"]; // Unique identifier for each row
+        echo "<tr class='datA'>
+            <td class='chckbx'><input type='checkbox' class='myCheckbox' id='CheckBox-{$rowId}'></td>
+            <td name='Row'>". $row["ROW"] ."</td>
+            <td name='PltNo'>". $row["Plt_No"] ."</td>
+            <td name='Code'>". $row["Product_code"] ."</td>
+            <td name='Batch'>". $row["Batch_No"] ."</td>
+            <td name='Exp'>". $row["Expiry"] ."</td>
+            <td name='NoCtns'>". $row["No_Ctns"] ."</td>
+            <td name='Units'>". $row["Units"] ."</td>
+            <td name='PrtBx'>". $row["Part_box"] ."</td>
+            <td name='Qty'>". $row["Total_Qty"] ."</td>
+            <td class='action'>
+                <div class='ups'>
+                    <a href='#' class='update'>Update</a>
+                </div>
+            </td>
+        </tr>";
+    }
+    ?>
+
+                         
+
                         
-                        while($row = $result->fetch_assoc()){
-                            echo  
-                            "<tr class='datA'>
-                                <td class='chckbx'><input type='checkbox'></th>
-                                <td name='Row'>". $row["ROW"] ."</td>
-                                <td name=PltNo> ". $row["Plt_No"] ."</td>
-                                <td name='Code'>". $row["Product_code"] ."</td>
-                                <td name='Batch'>". $row["Batch_No"] ."</td>
-                                <td name='Exp'>". $row["Expiry"] ."</td>
-                                <td name='NoCtns'>". $row["No_Ctns"] ."</td>
-                                <td name='Units'>". $row["Units"] ."</td>
-                                <td name='PrtBx'>". $row["Part_box"] ."</td>
-                                <td name='Qty'>". $row["Total_Qty"] ."</td>
-                                <td class='action'>
-                                    <div class='ups'>
-                                        <a href='#' class='update'>Update</a>
-                                    </div>
-                                </td>
-                            </tr>";
-                        }
-                        ?>
                     </tbody>
                 </table>
             </div>

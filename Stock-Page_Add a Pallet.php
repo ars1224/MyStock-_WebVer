@@ -71,6 +71,6 @@
                 </div>
             </div>
     </body>
-    <script src="StockScripts.js"></script>
+    <script src="add-palletsScript.JS"></script>
 <script src="https://kit.fontawesome.com/5c09730e7a.js" crossorigin="anonymous"></script>
 </html>

@@ -8,6 +8,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+/* navigation */
 
 nav{
     display: flex;
@@ -17,16 +18,10 @@ nav{
     padding: 10px;
     padding-left: 50px;
     max-width: 100% ;   
-}
-
-nav{
-    position: fixed;
+     position: fixed;
     width: 100% ; 
     top: 0;
-}
-
-nav{
-    background-color: rgb(8, 160, 71);
+     background-color: rgb(8, 160, 71);
     color: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
@@ -39,14 +34,18 @@ nav{
     padding-right: 40px;
 }
 
-ul{
-    padding-left: 30px;
-    font-family: 'Poppins', sans-serif;
-}
-
 .list{  
     padding-right: 50px;
     font-weight: 700;
+}
+
+.navi, ul{
+    font-size: 15px;
+}
+
+ul{
+    padding-left: 30px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .fa-regular{
@@ -79,47 +78,40 @@ ul{
     opacity: .7;
 color: #34db87;
 }
-
-.navi, ul{
-    font-size: 15px;
-}
-
+/*  search bar and buttons */
 .inventory{
     display: flex;
     justify-content: center;
     align-items: center;    
+    margin-top: 50px;
 }
+
 
 .content{
     margin-top: 50px;
 }
-
 
 .search-bar{
     display: flex;
     flex-direction: row;
     justify-content:start;
     margin-left: 25px;
-    
+}
 
-}
-.add-item{
-   display: flex;
-   flex-direction: row-reverse;
-   justify-content: end;
-   margin-top: -35px;
-   margin-right: 25px;
-}
-.inventory{
-    margin-top: 50px;
-}
 .searchBar{
     width: 250px;
      border-radius: 10px;
      border: 1px solid grey;
      font-weight: 500;
      height: 30px;
-     
+}
+
+.add-item{
+   display: flex;
+   flex-direction: row-reverse;
+   justify-content: end;
+   margin-top: -35px;
+   margin-right: 25px;
 }
 
 .resizedtextbox{
@@ -129,6 +121,7 @@ color: #34db87;
      font-weight: 500;
      height: 30px;
      color: grey;
+
 }
 
 .searchBtn{
@@ -140,7 +133,7 @@ color: #34db87;
     height: 30px;
     color: grey;
     box-shadow:0 2px 3px rgba(0, 0, 0, 0.6) ;
-}
+} 
 
 .addBtn,.delBtn{
     cursor: pointer;
@@ -157,6 +150,7 @@ color: #34db87;
     padding-left: 10px;
 }
 
+/* tables */
 th,td{
     border:2px solid rgb(255, 255, 255);
     padding:5px;
@@ -164,7 +158,7 @@ th,td{
     padding-right: px;
     text-align: center;
     text-justify:auto;
-    
+    background-color: white;
 }
 
 table{
@@ -174,17 +168,20 @@ table{
     margin-bottom  : 5px;
     width: 100%;
 }
+
 .table-wraper{
     background-color: grey;
     padding: 5px;
     width: 95%;
+    margin-bottom: 20px;
+height: 695px;
+overflow-y: scroll;
 }
+
 tbody,thead{
     padding: 100px;
 }
-th,td{
-    background-color: white;
-}
+
 tr{
     max-block-size: 5px;
 }
@@ -222,15 +219,12 @@ a.Del{
     flex-direction: row;
     max-height: 10px;
 }
+
 .ups,.del{
 padding-right: 10px;
 }
 
-.table-wraper{
-margin-bottom: 20px;
-height: 695px;
-overflow-y: scroll;
-}
+/* wh choose */
 
 .whName{
 display: flex;
@@ -281,8 +275,7 @@ cursor: pointer;
 text-shadow:0 1px 1px rgba(0, 0, 0, 0.6) ;
 }
 
-
-
+/* reason to delete */
 
 .resizedtextbox1{
 margin-top: 50px;
@@ -297,12 +290,7 @@ font-size: 15px;
 padding: 3px;
 }
 
-.addbtn1,.addbtn2{
-display: flex;
-flex-direction: row;
-margin-top: 50px;
-
-}
+/* add deleter btn */
 
 .addBtn,.delBtn{
 font-size: 15px;
@@ -322,13 +310,20 @@ margin-right:20px;
     display: none;
 }
 
+#deleteBtn.show{
+    display: flex;
+}
 
-.erRor{
-    background-color: rgb(240, 132, 132);
-    color: aliceblue;
-    border-radius: 5px;
-    padding: 5px;
-  }
+#deleteBtn.hide{
+    display: none;
+}
+
+
+.delBtn.remove{
+    visibility: hidden;
+}
+
+/*footer*/
 
 footer{
     display: flex;
@@ -343,6 +338,7 @@ footer{
             width: 100%;
 }
 
+/*pop up*/
 .show{
     display: flex;
     flex-direction: column;
@@ -384,4 +380,3 @@ footer{
 .textAnsLong{
     height: 50px;
 }
-
