@@ -56,7 +56,7 @@ if(isset($_POST['SubmitBtn'])){
         $result = mysqli_query($conn, $sql);
 
         if($result){
-            header("Location: Stock-Page_Add a Pallet.php");
+            header("Location: Stock-pages.php");
             exit();
         }else{
             header("Location: Stock-Page_Add a Pallet.php?error=Input a valid Credentials!");

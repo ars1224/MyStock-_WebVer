@@ -63,9 +63,11 @@
                         <div class="pop1AddPlt">
                             <button id="AddBtn" class="addBtn" type="submit" name="SubmitBtn">ADD</button>
                         </div>
-                        
-                        <div class="pop1AddMorePlt">
-                            <button class="addBtn" type="submit" name="AddBtnMore">ADD MORE</button>
+                        <div class="AddMore">  
+                            <label class="ClickLbl">Click this button<br> if you have multiple pallets to add.</label>
+                            <div class="pop1AddMorePlt">
+                               <button class="addBtn" type="submit" name="AddBtnMore">ADD MORE</button>
+                            </div>
                         </div>
                     </div>
                 </div>

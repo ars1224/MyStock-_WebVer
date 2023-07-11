@@ -130,10 +130,10 @@ flex-direction: column;
     }
 
     
-    .addbtn1,.addbtn2{
+    .addbtn1{
     display: flex;
-    flex-direction: row;
-    margin-top: 20px;
+    flex-direction: column;
+    margin-top: 30px;
     
     }
     
@@ -156,5 +156,22 @@ flex-direction: column;
         width: 60%;
         color: grey;
       }
+
+      .AddMore{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+      }
+
+      .pop1AddMorePlt{
+        margin-top: 15px;
+      }
+
+      .ClickLbl{
+        text-align:center;
+        margin-top: 30px;
+        font-size: medium;
+    }
       
       
