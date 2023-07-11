@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MyStock | Stock_Add a Pallet</title>
-        <link rel="stylesheet" href="styles_Stock-AddPallets.css">
+        <link rel="stylesheet" href="styles_Stock-AddPallet.css">
     </head>
 
     <body>
@@ -19,15 +19,21 @@
                     <ul class="received"><a href="home.php" class="recI">RECEIVED ITEMS</a></ul>
                     <ul class="log"><a href="home.php" class="lg">LOG</a></ul>
                 </div>   
-    
                 <div class="user">
                     <i class="fa-regular fa-user"></i>
                 </div>
-        </nav>
+        </nav> 
+        
+        <div class="main">
+           <div class="arrow">
+               <a href="Stock-pages.php" class="Back"> <i class="fa-solid fa-arrow-left" id="arrow">Back</i></a>
+        </div>
+
+
 
             <div class="add-pallet"> 
                 <div class="popUp1" id="PopUp_1">
-                <form action="stock.php" class="AddFrm" method="post">
+                <form action="AddStocks.php" class="AddFrm" method="post">
                     <div class="popHead" >
                         <p class="pHead">Add A Pallet!</p>
                         <p class="pBody">Fill the Pallet Information Bellow.</p>
@@ -52,7 +58,7 @@
                         <input class="inputs"  name="pltNoBar" type="number"  placeholder="Plt No." >
                         <input class="inputs"  name="pcodeBar" type="text"  placeholder="Prod. Code" >
                         <input class="inputs"  name="batchNoBar" type="text"  placeholder="Batch No." >
-                        <input class="inputs" id="date"  name="ExpBar" type="date"  placeholder="Expiry" value="YYYY-MM-DD">
+                        <input class="inputs" id="date"  name="ExpBar" type="date"  placeholder="Expiry" value="yyyy-MM-dd">
                         <input id="Num1" class="inputs"  name="noCtnBar" type="text"  placeholder="No. of Ctns" >
                         <input id="Num2" class="inputs"  name="unitsBar" type="text"  placeholder="Units/Ctn" >
                         <input id="Num3" class="inputs"  name="prtBxBar" type="text"  placeholder="Part Box Qty" >
@@ -72,6 +78,7 @@
                     </div>
                 </div>
             </div>
+        </div>    
     </body>
     <script src="add-palletsScript.JS"></script>
 <script src="https://kit.fontawesome.com/5c09730e7a.js" crossorigin="anonymous"></script>

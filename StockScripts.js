@@ -48,6 +48,34 @@ function toggle(){
 
         var back = document.getElementById('Show');
         back.classList.toggle('ext')
+};
+
+
+function calculateTotals() {
+  // Get all the checkboxes
+  var checkboxes = document.getElementsByClassName('myCheckbox');
+  var totalCtn = 0;
+  var totalUnits = 0;
+
+  // Iterate over the checkboxes
+  for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+          // Get the corresponding row
+          var row = checkboxes[i].closest('tr, th');
+
+          // Get the quantity and cartons values
+          var qty = parseInt(row.querySelector('[name="Qty"]').textContent);
+          var ctns = parseInt(row.querySelector('[name="NoCtns"]').textContent);
+
+          // Accumulate the totals
+          totalCtn += ctns;
+          totalUnits += ( qty);
+      }
+  }
+
+  // Update the footer totals
+  document.getElementById('ctnTotal').textContent = totalCtn;
+  document.getElementById('unitsTotal').textContent = totalUnits;
 }
 
 

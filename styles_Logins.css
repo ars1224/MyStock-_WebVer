@@ -29,13 +29,12 @@ align-items: center;
 }
 
 .Remember{
+    display: none;
     align-self: flex-start;
     padding-left: 30px;
-}
-
-.Remember{
     padding-top: 10px;
 }
+
 
 .btn, .Register, .forgot, .input-box-user, .input-box-pass,.UserSign,
 .PassSign,.NameSign,.DeptSign{

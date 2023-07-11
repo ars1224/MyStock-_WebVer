@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MyStock | login</title>
-        <link rel="stylesheet" href="styles_Login.css">
+        <link rel="stylesheet" href="styles_Logins.css">
 </head>
 
 <body>
@@ -47,7 +47,7 @@
 
                 <div class="btn"><button class="Login-Btn" type="submit" name="SubmitBtn">LogIn</button> </div>
 
-               <div class="forgot"> <a href="#">Forgot Username/Password?</a> </div> 
+               <div class="forgot"> <a href="Conatct.php">Forgot Username/Password?</a> </div> 
 
                <div class="Register">
                 <p>Don't have an account? <a href="sign_up.php" class="register-link">Click here!</a></p>

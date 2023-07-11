@@ -53,16 +53,16 @@
     <div class="content">
         <div class="search-bar">
             <div class="search">
-                <input class="searchBar" type="text" name="search" placeholder="Looking for..." >
+                <input class="searchBar" type="text" name="search" placeholder="    Looking for..." >
             </div>
             
             <div class="drop">
                 <select name="Prod" class="resizedtextbox" id="drop">
-                    <option value="Loc">Location</option>
-                    <option value="code">Product Code</option>
-                    <option value="des">Product Description</option>
-                    <option value="batchNo">Batch Number</option>
-                    <option value="exp">Expiration</option>
+                    <option value="Loc"> Location</option>
+                    <option value="code"> Product Code</option>
+                    <option value="des"> Product Description</option>
+                    <option value="batchNo"> Batch Number</option>
+                    <option value="exp"> Expiration</option>
                 </select>
             </div>
             
@@ -76,13 +76,13 @@
         <button id="deleteBtn" class="delBtn" type="button" name="delBtn" onclick="toggle()">Delete</button>
         </div>
         
-        
+      <form action="delete.php" id="my-form" method="post">  
         <div class="inventory">
             <div class="table-wraper">
                 <table class="StockSheet">
                 <thead>
     <tr class="headRow">
-        <th class="chckbx"><input type="checkbox" id="checkbox" onclick="toggleBtn()"></th>
+        <th class="chckbx"><input type="checkbox" id="checkbox" onclick="toggleBtn()" ></th>
         <th class="headr0">Row</th>
         <th class="headr1">Pallet No.</th>
         <th class="headr2">Product Code</th>
@@ -96,37 +96,37 @@
     </tr>
 </thead>
 
-<form action="delete.php" id="my-form" method="post">
+
 <tbody>
 <?php
-include "conn_Stock_db.php";
+                            include "conn_Stock_db.php";
 
-$sql = "SELECT * FROM wh1";
-$result = $conn->query($sql);
+                            $sql = "SELECT * FROM wh1";
+                            $result = $conn->query($sql);
 
-while ($row = $result->fetch_assoc()) {
-    $Plt = $row["Plt_No"]; 
-    echo "<tr class='datA'>
-        <td class='chckbx'><input type='checkbox' name='selectRow[]' class='myCheckbox' value='". $row["Plt_No"] ."' id='CheckBox-{$Plt}'></td>
-        <td id='row' name='Row'>". $row["ROW"] ."</td>
-        <td id='pltno' name='PltNo'>". $row["Plt_No"] ."</td>
-        <td id='code' name='Code'>". $row["Product_code"] ."</td>
-        <td id='batch' name='Batch'>". $row["Batch_No"] ."</td>
-        <td id='exp' name='Exp'>". $row["Expiry"] ."</td>
-        <td id='noCtn' name='NoCtns'>". $row["No_Ctns"] ."</td>
-        <td id='unit' name='Units'>". $row["Units"] ."</td>
-        <td id='prtbx' name='PrtBx'>". $row["Part_box"] ."</td>
-        <td id='total' name='Qty'>". $row["Total_Qty"] ."</td>
-        <td class='action'>
-            <div class='ups'>
-                <a href='#' class='update'>Update</a>
-            </div>
-        </td>
-    </tr>";
-}
+                            while ($row = $result->fetch_assoc()) {
+                                $Plt = $row["Plt_No"]; 
+                                echo "<tr class='datA'>
+                                    <td class='chckbx'><input type='checkbox' name='selectRow[]' class='myCheckbox' value='". $row["Plt_No"] ."' id='CheckBox-{$Plt}' onclick='calculateTotals()'></td>
+                                    <td id='row' name='Row'>". $row["ROW"] ."</td>
+                                    <td id='pltno' name='PltNo'>". $row["Plt_No"] ."</td>
+                                    <td id='code' name='Code'>". $row["Product_code"] ."</td>
+                                    <td id='batch' name='Batch'>". $row["Batch_No"] ."</td>
+                                    <td id='exp' name='Exp'>". $row["Expiry"] ."</td>
+                                    <td id='noCtn' name='NoCtns'>". $row["No_Ctns"] ."</td>
+                                    <td id='unit' name='Units'>". $row["Units"] ."</td>
+                                    <td id='prtbx' name='PrtBx'>". $row["Part_box"] ."</td>
+                                    <td id='total' name='Qty'>". $row["Total_Qty"] ."</td>
+                                    <td class='action'>
+                                        <div class='ups'>
+                                            <a href='#' class='update'>Update</a>
+                                        </div>
+                                    </td>
+                                </tr>";
+                            }
 
-$conn->close();
-?>
+                            $conn->close();
+                            ?>
                         
 
                         
@@ -141,8 +141,12 @@ $conn->close();
     
     <div class='footer'>
         <footer>
-            <h6>Total Ctn:</h6><p id='CtnTotal'>;</p>
-            <h6>Total units:</h6><p id='UnitsTotal'>;</p>
+        <h6>Total Ctn:</h6><label id="ctnTotal" name="CtnTotal" style="color:red;
+            font-weight: 700; ">0</label>
+            <h6>Total units:</h6><label id="unitsTotal" name="UnitsTotal" 
+            style="
+            color:red;
+            font-weight: 700; ">0</label>
         </footer>
     </div></div>
     
@@ -165,4 +169,32 @@ $conn->close();
 <script src="StockScripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/5c09730e7a.js" crossorigin="anonymous"></script>
+<script>
+    function calculateTotals() {
+  // Get all the checkboxes
+  var checkboxes = document.getElementsByClassName('myCheckbox');
+  var totalCtn = 0;
+  var totalUnits = 0;
+
+  // Iterate over the checkboxes
+  for (var i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+          // Get the corresponding row
+          var row = checkboxes[i].closest('tr, th');
+
+          // Get the quantity and cartons values
+          var qty = parseInt(row.querySelector('[name="Qty"]').textContent);
+          var ctns = parseInt(row.querySelector('[name="NoCtns"]').textContent);
+
+          // Accumulate the totals
+          totalCtn += ctns;
+          totalUnits += ( qty);
+      }
+  }
+
+  // Update the footer totals
+  document.getElementById('ctnTotal').textContent = totalCtn;
+  document.getElementById('unitsTotal').textContent = totalUnits;
+}
+</script>
 </html>
