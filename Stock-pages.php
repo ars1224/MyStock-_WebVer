@@ -96,38 +96,42 @@
     </tr>
 </thead>
 
+<form action="delete.php" id="my-form" method="post">
 <tbody>
-    <?php
-    include "conn_Stock_db.php";
-    $sql = "SELECT * FROM wh1";
-    $result = $conn->query($sql);
+<?php
+include "conn_Stock_db.php";
 
-    while ($row = $result->fetch_assoc()) {
-        $rowId = $row["ROW"]; // Unique identifier for each row
-        echo "<tr class='datA'>
-            <td class='chckbx'><input type='checkbox' class='myCheckbox' id='CheckBox-{$rowId}'></td>
-            <td name='Row'>". $row["ROW"] ."</td>
-            <td name='PltNo'>". $row["Plt_No"] ."</td>
-            <td name='Code'>". $row["Product_code"] ."</td>
-            <td name='Batch'>". $row["Batch_No"] ."</td>
-            <td name='Exp'>". $row["Expiry"] ."</td>
-            <td name='NoCtns'>". $row["No_Ctns"] ."</td>
-            <td name='Units'>". $row["Units"] ."</td>
-            <td name='PrtBx'>". $row["Part_box"] ."</td>
-            <td name='Qty'>". $row["Total_Qty"] ."</td>
-            <td class='action'>
-                <div class='ups'>
-                    <a href='#' class='update'>Update</a>
-                </div>
-            </td>
-        </tr>";
-    }
-    ?>
+$sql = "SELECT * FROM wh1";
+$result = $conn->query($sql);
 
-                         
+while ($row = $result->fetch_assoc()) {
+    $Plt = $row["Plt_No"]; 
+    echo "<tr class='datA'>
+        <td class='chckbx'><input type='checkbox' name='selectRow[]' class='myCheckbox' value='". $row["Plt_No"] ."' id='CheckBox-{$Plt}'></td>
+        <td id='row' name='Row'>". $row["ROW"] ."</td>
+        <td id='pltno' name='PltNo'>". $row["Plt_No"] ."</td>
+        <td id='code' name='Code'>". $row["Product_code"] ."</td>
+        <td id='batch' name='Batch'>". $row["Batch_No"] ."</td>
+        <td id='exp' name='Exp'>". $row["Expiry"] ."</td>
+        <td id='noCtn' name='NoCtns'>". $row["No_Ctns"] ."</td>
+        <td id='unit' name='Units'>". $row["Units"] ."</td>
+        <td id='prtbx' name='PrtBx'>". $row["Part_box"] ."</td>
+        <td id='total' name='Qty'>". $row["Total_Qty"] ."</td>
+        <td class='action'>
+            <div class='ups'>
+                <a href='#' class='update'>Update</a>
+            </div>
+        </td>
+    </tr>";
+}
+
+$conn->close();
+?>
+                        
 
                         
                     </tbody>
+                    </form>
                 </table>
             </div>
         </div>
@@ -135,26 +139,27 @@
 
     
     
-    <div class="footer">
+    <div class='footer'>
         <footer>
-            <h6>Total Ctn:</h6><p id="CtnTotal">;</p>
-            <h6>Total units:</h6><p id="UnitsTotal">;</p>
+            <h6>Total Ctn:</h6><p id='CtnTotal'>;</p>
+            <h6>Total units:</h6><p id='UnitsTotal'>;</p>
         </footer>
     </div></div>
     
-    <div id="Show" class="show">
+    <div id='Show' class='show'>
         <p>Reason to delete</p>
-        <select class="reason">
-            <option value=""disabled selected hidden>Choose Here!</option>
-            <option id="sent"value="sent">Sending to</option>
-            <option id="trans"value="trans">Transfering to</option>
-            <option id="exp"value="exp">Expired</option>
-            <option id="other"value="other">other</option>
+        <select class='reason'>
+            <option value=''disabled selected hidden>Choose Here!</option>
+            <option id='sent'value='sent'>Sending to</option>
+            <option id='trans'value='trans'>Transfering to</option>
+            <option id='exp'value='exp'>Expired</option>
+            <option id='other'value='other'>other</option>
         </select>
-        <input type="text" class="textAns" name="TextReason">
-        <input type="text" class="textAnsLong" name="TextReason">
-        <input type="date" class="expDate" name="dateReason">
-        <button type="submit" class="ReasonBtn" id="reasonbtn" onclick="toggle()">Submit</button>
+        <input type='text' class='textAns' name='TextReason'>
+        <input type='text' class='textAnsLong' name='TextReason'>
+        <input type='date' class='expDate' name='dateReason'>
+    <button type='submit' form="my-form" class='ReasonBtn' id='reasonbtn' name='delete' onclick='toggle()' >Submit</button>
+
     </div>
 </body>
 <script src="StockScripts.js"></script>

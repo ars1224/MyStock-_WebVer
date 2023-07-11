@@ -36,11 +36,6 @@ checkboxes.forEach(function(checkbox) {
   });
 });
 
-  
-  
-  
-
-
 function toggle(){
         var blurr = document.getElementById('blur');
         blurr.classList.toggle('active');
@@ -54,6 +49,5 @@ function toggle(){
         var back = document.getElementById('Show');
         back.classList.toggle('ext')
 }
-
 
 
