@@ -48,7 +48,16 @@ function toggle(){
 
         var back = document.getElementById('Show');
         back.classList.toggle('ext')
+
+        
 };
+
+function Toggle(){
+  var lbl = document.getElementById('iwantToHide');
+        lbl.classList.toggle('hideIt')
+  var exchange = document.getElementById('updateText');
+        exchange.classList.toggle('replace')
+}
 
 
 function calculateTotals() {

@@ -196,7 +196,7 @@ tr{
     background-color: white;
 }
 
-a.update{
+.update{
     border-color: rgba(4, 31, 80, 0.795);
     background-color: rgb(53, 127, 236);
     color: aliceblue;
@@ -227,6 +227,19 @@ a.Del{
 .ups,.del{
 padding-right: 10px;
 }
+
+#iwantToHide.hideIt{
+   display: none;
+}
+
+#updateText{
+    display: none;
+}
+
+#updateText.replace{
+    display: block;
+}
+
 
 /* wh choose */
 
